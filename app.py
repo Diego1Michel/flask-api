@@ -1,3 +1,4 @@
+from cProfile import run
 from flask import Flask, jsonify
 
 app = Flask(__name__) #incializa a aplicação
@@ -22,4 +23,6 @@ def cria_loja():
 
 @app.route(' /loja')
 def get_lojas():
+    return jsonify({'lojas': lojas})
 
+app(run)
