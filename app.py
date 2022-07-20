@@ -25,4 +25,4 @@ def cria_loja():
 def get_lojas():
     return jsonify({'lojas': lojas})
 
-app(run)
+app.run()
